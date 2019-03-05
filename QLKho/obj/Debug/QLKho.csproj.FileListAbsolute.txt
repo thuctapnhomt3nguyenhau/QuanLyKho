@@ -1,0 +1,15 @@
+E:\TTNhom\QuanLyKho\QLKho\bin\Debug\QLKho.exe.config
+E:\TTNhom\QuanLyKho\QLKho\bin\Debug\QLKho.exe
+E:\TTNhom\QuanLyKho\QLKho\bin\Debug\QLKho.pdb
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.csprojAssemblyReference.cache
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.Properties.Resources.resources
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.GenerateResource.cache
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.CoreCompileInputs.cache
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.exe
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.pdb
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.frmmenu.resources
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhanVien.resources
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham.resources
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmSanPham.resources
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmXuatSanPham.resources
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhaCungCap.resources
