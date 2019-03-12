@@ -157,3 +157,115 @@ BEGIN
 		OR (dbo.NHANVIEN.EMAIL_NV LIKE N'%' + @SEARCHVALUE + '%')
 END
 GO
+
+---------------------------------------------------Xuất kho-----------------------------------------------------------------------------
+CREATE VIEW v_CTPhieuXuat
+AS
+SELECT MA_CTPX,MA_PX,CT_PHIEUXUAT.MA_SP,CT_PHIEUXUAT.SOLUONG,DONGIA,dbo.SANPHAM.TEN_SP FROM dbo.CT_PHIEUXUAT, dbo.SANPHAM where SANPHAM.MA_SP = CT_PHIEUXUAT.MA_SP
+GO
+CREATE VIEW v_PhieuXuat
+AS
+SELECT MA_PX,PHIEUXUAT.MA_NV,TEN_NV,NGAYXUAT FROM dbo.PHIEUXUAT,dbo.NHANVIEN WHERE NHANVIEN.MA_NV=PHIEUXUAT.MA_NV
+GO
+CREATE VIEW v_XuatKho
+AS
+SELECT v_CTPhieuXuat.MA_PX,MA_NV,TEN_NV,NGAYXUAT,MA_CTPX,MA_SP,SOLUONG,DONGIA,TEN_SP FROM dbo.v_PhieuXuat LEFT JOIN dbo.v_CTPhieuXuat ON v_CTPhieuXuat.MA_PX = v_PhieuXuat.MA_PX
+GO
+CREATE PROC USP_GetListXuatKho
+AS
+SELECT * FROM dbo.v_PhieuXuat LEFT JOIN dbo.v_CTPhieuXuat ON v_CTPhieuXuat.MA_PX = v_PhieuXuat.MA_PX
+GO
+
+ALTER PROC USP_ThemPhieuXuat
+	@mapx INT,
+	@manv INT,
+	@ngayxuat DATE,
+	@tensp NVARCHAR(100),
+	@soluong INT
+AS
+BEGIN
+	DECLARE @id INT,@idsp INT,@gia FLOAT,@soluongton INT
+	IF (SELECT COUNT(*) FROM dbo.PHIEUXUAT WHERE MA_PX = @mapx) = 0
+	BEGIN
+		INSERT dbo.PHIEUXUAT ( MA_NV, NGAYXUAT ) VALUES  ( @manv, @ngayxuat)
+		SELECT @id=SCOPE_IDENTITY()
+	END
+	ELSE SET @id = @mapx
+	SELECT @idsp=MA_SP FROM dbo.SANPHAM WHERE TEN_SP=@tensp
+	SELECT @gia=GIA FROM dbo.SANPHAM WHERE MA_SP=@idsp
+	SELECT @soluongton = SOLUONG FROM dbo.SANPHAM
+	IF @soluongton > @soluong
+	BEGIN
+		IF (SELECT COUNT(*) FROM dbo.CT_PHIEUXUAT WHERE MA_SP=@idsp AND MA_PX=@mapx) = 0
+		BEGIN
+			INSERT dbo.CT_PHIEUXUAT ( MA_PX, MA_SP, SOLUONG, DONGIA )VALUES  ( @id, @idsp, @soluong, @gia )
+			UPDATE dbo.SANPHAM SET SOLUONG=SOLUONG-@soluong WHERE TEN_SP = @tensp
+		END
+		ELSE
+		BEGIN
+			UPDATE dbo.CT_PHIEUXUAT SET SOLUONG=SOLUONG+@soluong WHERE MA_PX=@mapx AND MA_SP=@idsp
+		END
+	END
+	ELSE RETURN 0;
+END
+GO
+ALTER PROC USP_UpdatePhieuXuat
+	@mapx INT,
+	@mact INT,
+	@manv INT,
+	@ngayxuat DATE,
+	@tensp NVARCHAR(100),
+	@soluong INT
+AS
+BEGIN
+	UPDATE dbo.PHIEUXUAT SET MA_NV=@manv,NGAYXUAT=@ngayxuat WHERE MA_PX=@mapx
+	DECLARE @masp INT,@soluongxuat INT,@maspct INT, @dongia FLOAT
+	SELECT @masp=MA_SP,@dongia = GIA FROM dbo.SANPHAM WHERE TEN_SP=@tensp
+	SELECT @maspct=MA_SP,@soluongxuat=SOLUONG FROM dbo.CT_PHIEUXUAT WHERE MA_CTPX=@mact
+	IF ( @maspct <> @masp)
+	BEGIN
+		UPDATE dbo.SANPHAM SET SOLUONG=SOLUONG+@soluongxuat WHERE MA_SP=@maspct
+		UPDATE dbo.CT_PHIEUXUAT SET MA_SP = @masp , SOLUONG = @soluong WHERE MA_CTPX=@mact
+		UPDATE dbo.SANPHAM SET SOLUONG = SOLUONG - @soluong WHERE MA_SP=@masp
+	END
+	ELSE
+	BEGIN
+		UPDATE dbo.SANPHAM SET SOLUONG = SOLUONG + @soluongxuat - @soluong WHERE MA_SP=@masp
+		UPDATE dbo.CT_PHIEUXUAT SET SOLUONG = @soluong WHERE MA_CTPX=@mact
+	END
+	UPDATE dbo.CT_PHIEUXUAT SET DONGIA = @dongia WHERE MA_CTPX = @mact
+END
+GO
+CREATE PROC DeleteCTPhieuXuatXuatKho
+@mapx INT,
+@mact INT
+AS
+BEGIN
+	DECLARE @soluong INT,@idsp INT
+	SELECT @idsp=MA_SP,@soluong=SOLUONG FROM dbo.CT_PHIEUXUAT WHERE MA_CTPX=@mact
+	DELETE FROM dbo.CT_PHIEUXUAT WHERE MA_CTPX = @mact
+	UPDATE dbo.SANPHAM SET SOLUONG=SOLUONG+@soluong WHERE MA_SP=@idsp
+	IF (SELECT COUNT(*) FROM dbo.CT_PHIEUXUAT WHERE MA_PX=@mapx)=0
+	DELETE FROM dbo.PHIEUXUAT WHERE MA_PX=@mapx
+END
+GO
+
+CREATE PROC DeletePhieuXuatXuatKho
+@mapx INT
+AS
+BEGIN
+	DELETE FROM dbo.CT_PHIEUXUAT WHERE MA_PX = @mapx
+	DELETE FROM dbo.PHIEUXUAT WHERE MA_PX=@mapx
+END
+GO
+CREATE PROC USP_SearchPhieuXuat
+@search NVARCHAR(100)
+AS
+BEGIN
+	SELECT * FROM dbo.v_XuatKho 
+	WHERE 
+	NGAYXUAT LIKE N'%' + @search + '%' OR TEN_NV LIKE N'%' + @search + '%' OR TEN_SP LIKE N'%' + @search + '%'
+	OR SOLUONG LIKE N'%' + @search + '%' OR DONGIA LIKE N'%' + @search + '%' OR MA_PX LIKE N'%' + @search + '%' 
+	OR MA_CTPX LIKE N'%' + @search + '%' 
+END
+GO
