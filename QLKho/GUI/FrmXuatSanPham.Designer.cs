@@ -33,6 +33,12 @@
             this.btnback = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvXuatsanpham = new System.Windows.Forms.DataGridView();
+            this.MA_PN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYXUAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MA_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cboManv = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,15 +58,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.MA_PN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYXUAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MA_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXuatsanpham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,6 +114,36 @@
             this.dgvXuatsanpham.RowTemplate.Height = 24;
             this.dgvXuatsanpham.Size = new System.Drawing.Size(1303, 369);
             this.dgvXuatsanpham.TabIndex = 0;
+            // 
+            // MA_PN
+            // 
+            this.MA_PN.HeaderText = "Mã Phiếu Xuất";
+            this.MA_PN.Name = "MA_PN";
+            // 
+            // NGAYXUAT
+            // 
+            this.NGAYXUAT.HeaderText = "Ngày Xuất";
+            this.NGAYXUAT.Name = "NGAYXUAT";
+            // 
+            // MA_NV
+            // 
+            this.MA_NV.HeaderText = "Nhân Viên Xuất";
+            this.MA_NV.Name = "MA_NV";
+            // 
+            // TEN_SP
+            // 
+            this.TEN_SP.HeaderText = "Tên Sản Phẩm";
+            this.TEN_SP.Name = "TEN_SP";
+            // 
+            // GIA
+            // 
+            this.GIA.HeaderText = "Đơn Giá";
+            this.GIA.Name = "GIA";
+            // 
+            // SOLUONG
+            // 
+            this.SOLUONG.HeaderText = "Số Lượng";
+            this.SOLUONG.Name = "SOLUONG";
             // 
             // pictureBox1
             // 
@@ -315,6 +345,16 @@
             this.panel1.Size = new System.Drawing.Size(1309, 471);
             this.panel1.TabIndex = 84;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(723, 281);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(124, 25);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Số Lượng : ";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -335,46 +375,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1306, 100);
             this.panel2.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(723, 281);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 25);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Số Lượng : ";
-            // 
-            // MA_PN
-            // 
-            this.MA_PN.HeaderText = "Mã Phiếu Xuất";
-            this.MA_PN.Name = "MA_PN";
-            // 
-            // NGAYXUAT
-            // 
-            this.NGAYXUAT.HeaderText = "Ngày Xuất";
-            this.NGAYXUAT.Name = "NGAYXUAT";
-            // 
-            // MA_NV
-            // 
-            this.MA_NV.HeaderText = "Nhân Viên Xuất";
-            this.MA_NV.Name = "MA_NV";
-            // 
-            // TEN_SP
-            // 
-            this.TEN_SP.HeaderText = "Tên Sản Phẩm";
-            this.TEN_SP.Name = "TEN_SP";
-            // 
-            // GIA
-            // 
-            this.GIA.HeaderText = "Đơn Giá";
-            this.GIA.Name = "GIA";
-            // 
-            // SOLUONG
-            // 
-            this.SOLUONG.HeaderText = "Số Lượng";
-            this.SOLUONG.Name = "SOLUONG";
             // 
             // FrmXuatSanPham
             // 

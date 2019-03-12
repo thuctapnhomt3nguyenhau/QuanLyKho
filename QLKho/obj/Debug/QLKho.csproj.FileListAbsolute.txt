@@ -13,3 +13,4 @@ E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham.resources
 E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmSanPham.resources
 E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmXuatSanPham.resources
 E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhaCungCap.resources
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham_CT.resources

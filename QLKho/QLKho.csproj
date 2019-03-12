@@ -73,6 +73,12 @@
     <Compile Include="GUI\FrmNhapSanPham.Designer.cs">
       <DependentUpon>FrmNhapSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmNhapSanPham_CT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmNhapSanPham_CT.Designer.cs">
+      <DependentUpon>FrmNhapSanPham_CT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmNhapSanPham.resx">
       <DependentUpon>FrmNhapSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmNhapSanPham_CT.resx">
+      <DependentUpon>FrmNhapSanPham_CT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmSanPham.resx">
       <DependentUpon>FrmSanPham.cs</DependentUpon>
