@@ -36,6 +36,7 @@ namespace QLKho.GUI
         void LoadListNV()
         {
             NvList.DataSource = NhanVienDAO.Instance.GetNV();
+
         }
 
         void AddBinding()
