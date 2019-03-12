@@ -33,12 +33,16 @@
             this.btnback = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvXuatsanpham = new System.Windows.Forms.DataGridView();
-            this.MA_PN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYXUAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MA_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MACTPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cboManv = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,15 +56,18 @@
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.txtTensp = new System.Windows.Forms.TextBox();
             this.txtGiasp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblChiTiet = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblMaPX = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboTenSP = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXuatsanpham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,12 +109,16 @@
             this.dgvXuatsanpham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvXuatsanpham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvXuatsanpham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MA_PN,
+            this.MAPX,
             this.NGAYXUAT,
-            this.MA_NV,
-            this.TEN_SP,
-            this.GIA,
-            this.SOLUONG});
+            this.HOTEN,
+            this.TENSP,
+            this.DONGIA,
+            this.SOLUONG,
+            this.MaSP,
+            this.MACTPX,
+            this.MANV,
+            this.MACT});
             this.dgvXuatsanpham.Location = new System.Drawing.Point(3, 3);
             this.dgvXuatsanpham.Name = "dgvXuatsanpham";
             this.dgvXuatsanpham.RowHeadersVisible = false;
@@ -115,35 +126,69 @@
             this.dgvXuatsanpham.Size = new System.Drawing.Size(1303, 369);
             this.dgvXuatsanpham.TabIndex = 0;
             // 
-            // MA_PN
+            // MAPX
             // 
-            this.MA_PN.HeaderText = "Mã Phiếu Xuất";
-            this.MA_PN.Name = "MA_PN";
+            this.MAPX.DataPropertyName = "MAPX";
+            this.MAPX.HeaderText = "Mã Phiếu Xuất";
+            this.MAPX.Name = "MAPX";
             // 
             // NGAYXUAT
             // 
+            this.NGAYXUAT.DataPropertyName = "NGAYXUAT";
             this.NGAYXUAT.HeaderText = "Ngày Xuất";
             this.NGAYXUAT.Name = "NGAYXUAT";
             // 
-            // MA_NV
+            // HOTEN
             // 
-            this.MA_NV.HeaderText = "Nhân Viên Xuất";
-            this.MA_NV.Name = "MA_NV";
+            this.HOTEN.DataPropertyName = "HOTEN";
+            this.HOTEN.HeaderText = "Nhân Viên Xuất";
+            this.HOTEN.Name = "HOTEN";
             // 
-            // TEN_SP
+            // TENSP
             // 
-            this.TEN_SP.HeaderText = "Tên Sản Phẩm";
-            this.TEN_SP.Name = "TEN_SP";
+            this.TENSP.DataPropertyName = "TENSP";
+            this.TENSP.HeaderText = "Tên Sản Phẩm";
+            this.TENSP.Name = "TENSP";
             // 
-            // GIA
+            // DONGIA
             // 
-            this.GIA.HeaderText = "Đơn Giá";
-            this.GIA.Name = "GIA";
+            this.DONGIA.DataPropertyName = "DONGIA";
+            this.DONGIA.HeaderText = "Đơn Giá";
+            this.DONGIA.Name = "DONGIA";
             // 
             // SOLUONG
             // 
+            this.SOLUONG.DataPropertyName = "SOLUONG";
             this.SOLUONG.HeaderText = "Số Lượng";
             this.SOLUONG.Name = "SOLUONG";
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "MaSP";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.Visible = false;
+            // 
+            // MACTPX
+            // 
+            this.MACTPX.DataPropertyName = "MACTPX";
+            this.MACTPX.HeaderText = "MACTPX";
+            this.MACTPX.Name = "MACTPX";
+            this.MACTPX.Visible = false;
+            // 
+            // MANV
+            // 
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "MANV";
+            this.MANV.Name = "MANV";
+            this.MANV.Visible = false;
+            // 
+            // MACT
+            // 
+            this.MACT.DataPropertyName = "MACT";
+            this.MACT.HeaderText = "MACT";
+            this.MACT.Name = "MACT";
+            this.MACT.Visible = false;
             // 
             // pictureBox1
             // 
@@ -160,7 +205,7 @@
             // cboManv
             // 
             this.cboManv.FormattingEnabled = true;
-            this.cboManv.Location = new System.Drawing.Point(198, 249);
+            this.cboManv.Location = new System.Drawing.Point(197, 280);
             this.cboManv.Name = "cboManv";
             this.cboManv.Size = new System.Drawing.Size(329, 24);
             this.cboManv.TabIndex = 2;
@@ -184,6 +229,7 @@
             this.btnHuy.Size = new System.Drawing.Size(94, 81);
             this.btnHuy.TabIndex = 16;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXoa
             // 
@@ -194,10 +240,11 @@
             this.btnXoa.Size = new System.Drawing.Size(94, 81);
             this.btnXoa.TabIndex = 15;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dtpNgayxuat
             // 
-            this.dtpNgayxuat.Location = new System.Drawing.Point(198, 180);
+            this.dtpNgayxuat.Location = new System.Drawing.Point(197, 222);
             this.dtpNgayxuat.Name = "dtpNgayxuat";
             this.dtpNgayxuat.Size = new System.Drawing.Size(329, 22);
             this.dtpNgayxuat.TabIndex = 1;
@@ -206,7 +253,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(57, 245);
+            this.label7.Location = new System.Drawing.Point(56, 276);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 25);
             this.label7.TabIndex = 19;
@@ -228,6 +275,7 @@
             this.btnSua.Size = new System.Drawing.Size(94, 81);
             this.btnSua.TabIndex = 14;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -238,6 +286,7 @@
             this.btnThem.Size = new System.Drawing.Size(94, 81);
             this.btnThem.TabIndex = 13;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnRefesh
             // 
@@ -248,6 +297,7 @@
             this.btnRefesh.Size = new System.Drawing.Size(94, 81);
             this.btnRefesh.TabIndex = 8;
             this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnSearch
             // 
@@ -258,6 +308,7 @@
             this.btnSearch.Size = new System.Drawing.Size(66, 48);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -267,16 +318,9 @@
             this.txtSearch.Size = new System.Drawing.Size(311, 48);
             this.txtSearch.TabIndex = 6;
             // 
-            // txtTensp
-            // 
-            this.txtTensp.Location = new System.Drawing.Point(863, 119);
-            this.txtTensp.Multiline = true;
-            this.txtTensp.Name = "txtTensp";
-            this.txtTensp.Size = new System.Drawing.Size(408, 55);
-            this.txtTensp.TabIndex = 3;
-            // 
             // txtGiasp
             // 
+            this.txtGiasp.Enabled = false;
             this.txtGiasp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiasp.Location = new System.Drawing.Point(863, 201);
             this.txtGiasp.Multiline = true;
@@ -299,7 +343,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 180);
+            this.label4.Location = new System.Drawing.Point(13, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 25);
             this.label4.TabIndex = 3;
@@ -309,7 +353,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 132);
+            this.label2.Location = new System.Drawing.Point(13, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 25);
             this.label2.TabIndex = 1;
@@ -319,6 +363,10 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.cboTenSP);
+            this.panel1.Controls.Add(this.lblChiTiet);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.lblMaPX);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.cboManv);
             this.panel1.Controls.Add(this.dtpNgayxuat);
@@ -332,7 +380,6 @@
             this.panel1.Controls.Add(this.btnRefesh);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.txtTensp);
             this.panel1.Controls.Add(this.txtGiasp);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -344,6 +391,47 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1309, 471);
             this.panel1.TabIndex = 84;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblChiTiet
+            // 
+            this.lblChiTiet.AutoSize = true;
+            this.lblChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChiTiet.Location = new System.Drawing.Point(248, 175);
+            this.lblChiTiet.Name = "lblChiTiet";
+            this.lblChiTiet.Size = new System.Drawing.Size(24, 25);
+            this.lblChiTiet.TabIndex = 26;
+            this.lblChiTiet.Text = "1";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(13, 175);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(204, 25);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Mã Chi Tiết Phiếu : ";
+            // 
+            // lblMaPX
+            // 
+            this.lblMaPX.AutoSize = true;
+            this.lblMaPX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaPX.Location = new System.Drawing.Point(203, 132);
+            this.lblMaPX.Name = "lblMaPX";
+            this.lblMaPX.Size = new System.Drawing.Size(24, 25);
+            this.lblMaPX.TabIndex = 24;
+            this.lblMaPX.Text = "1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(723, 281);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(124, 25);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Số Lượng : ";
             // 
             // label8
             // 
@@ -359,7 +447,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 248);
+            this.label3.Location = new System.Drawing.Point(8, 279);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 25);
             this.label3.TabIndex = 2;
@@ -375,6 +463,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1306, 100);
             this.panel2.TabIndex = 0;
+            // 
+            // cboTenSP
+            // 
+            this.cboTenSP.FormattingEnabled = true;
+            this.cboTenSP.Location = new System.Drawing.Point(863, 132);
+            this.cboTenSP.Name = "cboTenSP";
+            this.cboTenSP.Size = new System.Drawing.Size(408, 24);
+            this.cboTenSP.TabIndex = 27;
             // 
             // FrmXuatSanPham
             // 
@@ -417,7 +513,6 @@
         private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.TextBox txtTensp;
         private System.Windows.Forms.TextBox txtGiasp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -426,11 +521,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MA_PN;
+        private System.Windows.Forms.Label lblMaPX;
+        private System.Windows.Forms.Label lblChiTiet;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPX;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYXUAT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MA_NV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TEN_SP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MACTPX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MANV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MACT;
+        private System.Windows.Forms.ComboBox cboTenSP;
     }
 }
