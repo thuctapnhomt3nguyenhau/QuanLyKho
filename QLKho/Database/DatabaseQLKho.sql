@@ -176,7 +176,7 @@ AS
 SELECT * FROM dbo.v_PhieuXuat LEFT JOIN dbo.v_CTPhieuXuat ON v_CTPhieuXuat.MA_PX = v_PhieuXuat.MA_PX
 GO
 
-ALTER PROC USP_ThemPhieuXuat
+CREATE PROC USP_ThemPhieuXuat
 	@mapx INT,
 	@manv INT,
 	@ngayxuat DATE,
@@ -209,7 +209,8 @@ BEGIN
 	ELSE RETURN 0;
 END
 GO
-ALTER PROC USP_UpdatePhieuXuat
+
+CREATE PROC USP_UpdatePhieuXuat
 	@mapx INT,
 	@mact INT,
 	@manv INT,

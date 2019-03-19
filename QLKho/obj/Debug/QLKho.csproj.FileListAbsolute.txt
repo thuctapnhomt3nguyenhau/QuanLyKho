@@ -28,3 +28,4 @@ D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.GenerateResource.cache
 D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.CoreCompileInputs.cache
 D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.exe
 D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.pdb
+E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham_CT.resources
