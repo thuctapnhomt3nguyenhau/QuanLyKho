@@ -55,6 +55,9 @@
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\TenSP_DTO.cs" />
     <Compile Include="DTO\XuatKhoDTO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DTO\Ma_NccDTO.cs" />
+    <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
