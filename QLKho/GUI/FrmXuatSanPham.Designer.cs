@@ -61,13 +61,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboTenSP = new System.Windows.Forms.ComboBox();
             this.lblChiTiet = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblMaPX = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cboTenSP = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXuatsanpham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,6 +228,8 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(94, 81);
             this.btnHuy.TabIndex = 16;
+            this.btnHuy.Text = "Tạo phiếu xuất mới";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -393,6 +395,14 @@
             this.panel1.TabIndex = 84;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // cboTenSP
+            // 
+            this.cboTenSP.FormattingEnabled = true;
+            this.cboTenSP.Location = new System.Drawing.Point(863, 132);
+            this.cboTenSP.Name = "cboTenSP";
+            this.cboTenSP.Size = new System.Drawing.Size(408, 24);
+            this.cboTenSP.TabIndex = 27;
+            // 
             // lblChiTiet
             // 
             this.lblChiTiet.AutoSize = true;
@@ -463,14 +473,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1306, 100);
             this.panel2.TabIndex = 0;
-            // 
-            // cboTenSP
-            // 
-            this.cboTenSP.FormattingEnabled = true;
-            this.cboTenSP.Location = new System.Drawing.Point(863, 132);
-            this.cboTenSP.Name = "cboTenSP";
-            this.cboTenSP.Size = new System.Drawing.Size(408, 24);
-            this.cboTenSP.TabIndex = 27;
             // 
             // FrmXuatSanPham
             // 

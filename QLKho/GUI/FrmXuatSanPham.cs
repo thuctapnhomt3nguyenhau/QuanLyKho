@@ -94,6 +94,12 @@ namespace QLKho.GUI
         void Reset()
         {
             lblMaPX.Text = null;
+            lblChiTiet.Text = null;
+            dtpNgayxuat.Value = DateTime.Now;
+            LoadIntoComBoBoxMaNV(cboManv);
+            LoadIntoComBoBoxTenSP(cboTenSP);
+            txtGiasp.Text = null;
+            txtSoluongsp.Text = null;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

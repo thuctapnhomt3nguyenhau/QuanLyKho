@@ -186,31 +186,37 @@ CREATE PROC USP_ThemPhieuXuat
 AS
 BEGIN
 	DECLARE @id INT,@idsp INT,@gia FLOAT,@soluongton INT
-	IF (SELECT COUNT(*) FROM dbo.PHIEUXUAT WHERE MA_PX = @mapx) = 0
-	BEGIN
-		INSERT dbo.PHIEUXUAT ( MA_NV, NGAYXUAT ) VALUES  ( @manv, @ngayxuat)
-		SELECT @id=SCOPE_IDENTITY()
-	END
-	ELSE SET @id = @mapx
 	SELECT @idsp=MA_SP FROM dbo.SANPHAM WHERE TEN_SP=@tensp
 	SELECT @gia=GIA FROM dbo.SANPHAM WHERE MA_SP=@idsp
 	SELECT @soluongton = SOLUONG FROM dbo.SANPHAM
-	IF @soluongton > @soluong
+	IF (@soluongton < @soluong) RETURN 0
+	ELSE
 	BEGIN
-		IF (SELECT COUNT(*) FROM dbo.CT_PHIEUXUAT WHERE MA_SP=@idsp AND MA_PX=@mapx) = 0
+		IF (SELECT COUNT(*) FROM dbo.PHIEUXUAT WHERE MA_PX = @mapx) = 0
 		BEGIN
-			INSERT dbo.CT_PHIEUXUAT ( MA_PX, MA_SP, SOLUONG, DONGIA )VALUES  ( @id, @idsp, @soluong, @gia )
-			UPDATE dbo.SANPHAM SET SOLUONG=SOLUONG-@soluong WHERE TEN_SP = @tensp
+			INSERT dbo.PHIEUXUAT ( MA_NV, NGAYXUAT ) VALUES  ( @manv, @ngayxuat)
+			SELECT @id=SCOPE_IDENTITY()
 		END
-		ELSE
+		ELSE SET @id = @mapx
+		IF (@soluongton > @soluong)
 		BEGIN
-			UPDATE dbo.CT_PHIEUXUAT SET SOLUONG=SOLUONG+@soluong WHERE MA_PX=@mapx AND MA_SP=@idsp
+			IF (SELECT COUNT(*) FROM dbo.CT_PHIEUXUAT WHERE MA_SP=@idsp AND MA_PX=@mapx) = 0
+			BEGIN
+				INSERT dbo.CT_PHIEUXUAT ( MA_PX, MA_SP, SOLUONG, DONGIA )VALUES  ( @id, @idsp, @soluong, @gia )
+				UPDATE dbo.SANPHAM SET SOLUONG=SOLUONG-@soluong WHERE TEN_SP = @tensp
+			END
+			ELSE
+			BEGIN
+				UPDATE dbo.CT_PHIEUXUAT SET SOLUONG=SOLUONG+@soluong WHERE MA_PX=@mapx AND MA_SP=@idsp
+			END
 		END
 	END
-	ELSE RETURN 0;
 END
 GO
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5f2738ca78a256916e81ffc6a739e4710c2c61d7
 CREATE PROC USP_UpdatePhieuXuat
 	@mapx INT,
 	@mact INT,
@@ -220,22 +226,26 @@ CREATE PROC USP_UpdatePhieuXuat
 	@soluong INT
 AS
 BEGIN
-	UPDATE dbo.PHIEUXUAT SET MA_NV=@manv,NGAYXUAT=@ngayxuat WHERE MA_PX=@mapx
-	DECLARE @masp INT,@soluongxuat INT,@maspct INT, @dongia FLOAT
-	SELECT @masp=MA_SP,@dongia = GIA FROM dbo.SANPHAM WHERE TEN_SP=@tensp
-	SELECT @maspct=MA_SP,@soluongxuat=SOLUONG FROM dbo.CT_PHIEUXUAT WHERE MA_CTPX=@mact
-	IF ( @maspct <> @masp)
-	BEGIN
-		UPDATE dbo.SANPHAM SET SOLUONG=SOLUONG+@soluongxuat WHERE MA_SP=@maspct
-		UPDATE dbo.CT_PHIEUXUAT SET MA_SP = @masp , SOLUONG = @soluong WHERE MA_CTPX=@mact
-		UPDATE dbo.SANPHAM SET SOLUONG = SOLUONG - @soluong WHERE MA_SP=@masp
-	END
+	DECLARE @masp INT,@soluongxuat INT,@maspct INT, @dongia FLOAT,@soluongton INT
+	SELECT @masp=MA_SP,@dongia = GIA,@soluongton=SOLUONG FROM dbo.SANPHAM WHERE TEN_SP=@tensp
+	IF (@soluongton + (SELECT SOLUONG FROM dbo.CT_PHIEUXUAT WHERE MA_CTPX=@mact) < @soluong OR @soluong=0) RETURN 0
 	ELSE
 	BEGIN
-		UPDATE dbo.SANPHAM SET SOLUONG = SOLUONG + @soluongxuat - @soluong WHERE MA_SP=@masp
-		UPDATE dbo.CT_PHIEUXUAT SET SOLUONG = @soluong WHERE MA_CTPX=@mact
+		SELECT @maspct=MA_SP,@soluongxuat=SOLUONG FROM dbo.CT_PHIEUXUAT WHERE MA_CTPX=@mact
+		UPDATE dbo.PHIEUXUAT SET MA_NV=@manv,NGAYXUAT=@ngayxuat WHERE MA_PX=@mapx
+		IF ( @maspct <> @masp)
+		BEGIN
+			UPDATE dbo.SANPHAM SET SOLUONG=SOLUONG+@soluongxuat WHERE MA_SP=@maspct
+			UPDATE dbo.CT_PHIEUXUAT SET MA_SP = @masp , SOLUONG = @soluong WHERE MA_CTPX=@mact
+			UPDATE dbo.SANPHAM SET SOLUONG = SOLUONG - @soluong WHERE MA_SP=@masp
+		END
+		ELSE
+		BEGIN
+			UPDATE dbo.SANPHAM SET SOLUONG = SOLUONG + @soluongxuat - @soluong WHERE MA_SP=@masp
+			UPDATE dbo.CT_PHIEUXUAT SET SOLUONG = @soluong WHERE MA_CTPX=@mact
+		END
+		UPDATE dbo.CT_PHIEUXUAT SET DONGIA = @dongia WHERE MA_CTPX = @mact
 	END
-	UPDATE dbo.CT_PHIEUXUAT SET DONGIA = @dongia WHERE MA_CTPX = @mact
 END
 GO
 CREATE PROC DeleteCTPhieuXuatXuatKho
@@ -253,13 +263,20 @@ END
 GO
 
 CREATE PROC DeletePhieuXuatXuatKho
-@mapx INT
+@maphieuxuat INT
 AS
 BEGIN
-	DELETE FROM dbo.CT_PHIEUXUAT WHERE MA_PX = @mapx
-	DELETE FROM dbo.PHIEUXUAT WHERE MA_PX=@mapx
+	DECLARE @mactphieuxuat INT
+	WHILE (SELECT COUNT(*) FROM dbo.CT_PHIEUXUAT WHERE MA_PX=@maphieuxuat) <> 0
+	BEGIN
+		SET @mactphieuxuat = (SELECT TOP 1 (MA_CTPX) FROM dbo.CT_PHIEUXUAT WHERE MA_PX=@maphieuxuat)
+		EXEC dbo.DeleteCTPhieuXuatXuatKho @mapx = @maphieuxuat,  @mact = @mactphieuxuat
+	END
 END
 GO
+
+EXEC dbo.DeletePhieuXuatXuatKho @maphieuxuat = 8 -- int
+
 CREATE PROC USP_SearchPhieuXuat
 @search NVARCHAR(100)
 AS
@@ -270,6 +287,7 @@ BEGIN
 	OR SOLUONG LIKE N'%' + @search + '%' OR DONGIA LIKE N'%' + @search + '%' OR MA_PX LIKE N'%' + @search + '%' 
 	OR MA_CTPX LIKE N'%' + @search + '%' 
 END
+<<<<<<< HEAD
 GO
 =======
 
@@ -347,3 +365,6 @@ END
 GO
 
 >>>>>>> 9c42ee496d583440a794a0ca8d27e691078c1243
+=======
+GO
+>>>>>>> 5f2738ca78a256916e81ffc6a739e4710c2c61d7
