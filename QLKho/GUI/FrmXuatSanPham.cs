@@ -186,7 +186,6 @@ namespace QLKho.GUI
         {
             LoadListXK();
         }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtSearch.Text == "") MessageBox.Show("Chưa nhập thông tin tìm kiếm");

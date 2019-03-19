@@ -13,37 +13,4 @@ E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham.resources
 E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmSanPham.resources
 E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmXuatSanPham.resources
 E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhaCungCap.resources
-<<<<<<< HEAD
-D:\TT_Nhóm\QuanLyKho\QLKho\bin\Debug\QLKho.exe.config
-D:\TT_Nhóm\QuanLyKho\QLKho\bin\Debug\QLKho.exe
-D:\TT_Nhóm\QuanLyKho\QLKho\bin\Debug\QLKho.pdb
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csprojAssemblyReference.cache
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.frmmenu.resources
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhaCungCap.resources
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhanVien.resources
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham.resources
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmSanPham.resources
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmXuatSanPham.resources
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.Properties.Resources.resources
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.GenerateResource.cache
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.CoreCompileInputs.cache
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.exe
-D:\TT_Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.pdb
 E:\TTNhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham_CT.resources
-=======
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\bin\Debug\QLKho.exe.config
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\bin\Debug\QLKho.exe
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\bin\Debug\QLKho.pdb
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csprojAssemblyReference.cache
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.frmmenu.resources
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhaCungCap.resources
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhanVien.resources
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham.resources
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmSanPham.resources
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmXuatSanPham.resources
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.Properties.Resources.resources
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.GenerateResource.cache
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.CoreCompileInputs.cache
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.exe
-D:\Bài giảng năm 3 kỳ 2\TT Nhóm\QuanLyKho\QLKho\obj\Debug\QLKho.pdb
->>>>>>> 9c42ee496d583440a794a0ca8d27e691078c1243

@@ -38,7 +38,7 @@ namespace QLKho.GUI
         }
         void AddBinding()
         {
-            lblMancc.DataBindings.Add(new Binding("Text", dgvNhacungcap.DataSource, "MANCC", true, DataSourceUpdateMode.Never));
+            lblma.DataBindings.Add(new Binding("Text", dgvNhacungcap.DataSource, "MANCC", true, DataSourceUpdateMode.Never));
             txtTenncc.DataBindings.Add(new Binding("Text", dgvNhacungcap.DataSource, "TENNCC", true, DataSourceUpdateMode.Never));
             txtDiachincc.DataBindings.Add(new Binding("Text", dgvNhacungcap.DataSource, "DIACHINCC", true, DataSourceUpdateMode.Never));
             txtSdtncc.DataBindings.Add(new Binding("Text", dgvNhacungcap.DataSource, "SDTNCC", true, DataSourceUpdateMode.Never));
@@ -139,10 +139,11 @@ namespace QLKho.GUI
 
         void Reset()
         {
-            lblMancc.Text = "";
+            lblma.Text = "";
             txtTenncc.Text = "";
             txtDiachincc.Text = "";
             txtSdtncc.Text = "";
+            txtWebncc.Text = "";
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
