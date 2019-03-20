@@ -43,7 +43,7 @@
             // 
             this.btnnhanvien.BackColor = System.Drawing.SystemColors.Window;
             this.btnnhanvien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnhanvien.BackgroundImage")));
-            this.btnnhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnnhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnnhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnhanvien.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnnhanvien.Location = new System.Drawing.Point(261, 87);
@@ -139,7 +139,7 @@
             this.btnsanpham.Name = "btnsanpham";
             this.btnsanpham.Size = new System.Drawing.Size(208, 172);
             this.btnsanpham.TabIndex = 3;
-            this.btnsanpham.Text = "Sản Phẩm";
+            this.btnsanpham.Text = "Kho Sản Phẩm";
             this.btnsanpham.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnsanpham.UseVisualStyleBackColor = false;
             this.btnsanpham.Click += new System.EventHandler(this.btnsanpham_Click);
@@ -151,6 +151,7 @@
             this.ClientSize = new System.Drawing.Size(1225, 712);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

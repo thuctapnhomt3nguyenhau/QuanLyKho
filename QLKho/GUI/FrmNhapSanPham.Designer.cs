@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNhapSanPham));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnRefesh = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,9 +47,6 @@
             this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRefesh = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +69,31 @@
             this.panel1.Size = new System.Drawing.Size(1313, 373);
             this.panel1.TabIndex = 82;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.Location = new System.Drawing.Point(882, 193);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(167, 135);
+            this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSua.Location = new System.Drawing.Point(630, 193);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(160, 135);
+            this.btnSua.TabIndex = 14;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // btnThem
             // 
             this.btnThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThem.BackgroundImage")));
@@ -81,6 +106,18 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefesh.BackgroundImage")));
+            this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRefesh.Location = new System.Drawing.Point(150, 193);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(159, 135);
+            this.btnRefesh.TabIndex = 12;
+            this.btnRefesh.Text = "Refresh";
+            this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnRefesh.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -188,43 +225,6 @@
             this.SOLUONG.HeaderText = "Số Lượng";
             this.SOLUONG.Name = "SOLUONG";
             // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefesh.BackgroundImage")));
-            this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefesh.Location = new System.Drawing.Point(150, 193);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(159, 135);
-            this.btnRefesh.TabIndex = 12;
-            this.btnRefesh.Text = "Refresh";
-            this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnRefesh.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
-            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSua.Location = new System.Drawing.Point(630, 193);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(160, 135);
-            this.btnSua.TabIndex = 14;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(882, 193);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(167, 135);
-            this.btnXoa.TabIndex = 15;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
             // FrmNhapSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,6 +233,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmNhapSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhập Sản Phẩm";

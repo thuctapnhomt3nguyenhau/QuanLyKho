@@ -102,10 +102,12 @@
             // 
             this.btnHuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.BackgroundImage")));
             this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHuy.Location = new System.Drawing.Point(1116, 256);
+            this.btnHuy.Location = new System.Drawing.Point(1101, 245);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(94, 81);
+            this.btnHuy.Size = new System.Drawing.Size(109, 92);
             this.btnHuy.TabIndex = 16;
+            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -113,10 +115,12 @@
             // 
             this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(978, 256);
+            this.btnXoa.Location = new System.Drawing.Point(962, 245);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(94, 81);
+            this.btnXoa.Size = new System.Drawing.Size(110, 92);
             this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -124,10 +128,12 @@
             // 
             this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSua.Location = new System.Drawing.Point(840, 256);
+            this.btnSua.Location = new System.Drawing.Point(829, 245);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(94, 81);
+            this.btnSua.Size = new System.Drawing.Size(105, 92);
             this.btnSua.TabIndex = 14;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -135,10 +141,12 @@
             // 
             this.btnThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThem.BackgroundImage")));
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(707, 256);
+            this.btnThem.Location = new System.Drawing.Point(696, 245);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(94, 81);
+            this.btnThem.Size = new System.Drawing.Size(105, 92);
             this.btnThem.TabIndex = 13;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -146,10 +154,12 @@
             // 
             this.btnRefesh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefesh.BackgroundImage")));
             this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefesh.Location = new System.Drawing.Point(573, 256);
+            this.btnRefesh.Location = new System.Drawing.Point(555, 245);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(94, 81);
+            this.btnRefesh.Size = new System.Drawing.Size(112, 92);
             this.btnRefesh.TabIndex = 12;
+            this.btnRefesh.Text = "Refresh";
+            this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnRefesh.UseVisualStyleBackColor = true;
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
@@ -174,7 +184,7 @@
             // 
             // txtEmailnv
             // 
-            this.txtEmailnv.Location = new System.Drawing.Point(812, 186);
+            this.txtEmailnv.Location = new System.Drawing.Point(812, 173);
             this.txtEmailnv.Multiline = true;
             this.txtEmailnv.Name = "txtEmailnv";
             this.txtEmailnv.Size = new System.Drawing.Size(311, 46);
@@ -182,7 +192,7 @@
             // 
             // txtSdtnv
             // 
-            this.txtSdtnv.Location = new System.Drawing.Point(812, 119);
+            this.txtSdtnv.Location = new System.Drawing.Point(812, 109);
             this.txtSdtnv.Multiline = true;
             this.txtSdtnv.Name = "txtSdtnv";
             this.txtSdtnv.Size = new System.Drawing.Size(311, 48);
@@ -201,7 +211,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(595, 132);
+            this.label5.Location = new System.Drawing.Point(595, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 25);
             this.label5.TabIndex = 4;
@@ -211,7 +221,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(680, 194);
+            this.label4.Location = new System.Drawing.Point(680, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 3;
@@ -337,6 +347,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân Viên";

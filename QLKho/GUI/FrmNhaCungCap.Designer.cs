@@ -53,11 +53,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblma = new System.Windows.Forms.Label();
             this.txtDiachincc = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSdtncc = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblma = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhacungcap)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,11 +117,13 @@
             // 
             this.btnHuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.BackgroundImage")));
             this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHuy.Location = new System.Drawing.Point(1215, 270);
+            this.btnHuy.Location = new System.Drawing.Point(1190, 244);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(93, 81);
+            this.btnHuy.Size = new System.Drawing.Size(131, 107);
             this.btnHuy.TabIndex = 16;
+            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -129,11 +131,13 @@
             // 
             this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(1105, 270);
+            this.btnXoa.Location = new System.Drawing.Point(1059, 245);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(93, 81);
+            this.btnXoa.Size = new System.Drawing.Size(119, 107);
             this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -141,11 +145,13 @@
             // 
             this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSua.Location = new System.Drawing.Point(989, 270);
+            this.btnSua.Location = new System.Drawing.Point(924, 244);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(93, 81);
+            this.btnSua.Size = new System.Drawing.Size(122, 107);
             this.btnSua.TabIndex = 14;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -153,11 +159,13 @@
             // 
             this.btnThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThem.BackgroundImage")));
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(881, 270);
+            this.btnThem.Location = new System.Drawing.Point(788, 243);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(93, 81);
+            this.btnThem.Size = new System.Drawing.Size(113, 108);
             this.btnThem.TabIndex = 13;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -165,11 +173,13 @@
             // 
             this.btnRefesh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefesh.BackgroundImage")));
             this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefesh.Location = new System.Drawing.Point(769, 270);
+            this.btnRefesh.Location = new System.Drawing.Point(645, 244);
             this.btnRefesh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(93, 81);
+            this.btnRefesh.Size = new System.Drawing.Size(121, 108);
             this.btnRefesh.TabIndex = 7;
+            this.btnRefesh.Text = "Refresh";
+            this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnRefesh.UseVisualStyleBackColor = true;
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
@@ -189,10 +199,10 @@
             // 
             this.btnback.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnback.BackgroundImage")));
             this.btnback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnback.Location = new System.Drawing.Point(1188, -2);
+            this.btnback.Location = new System.Drawing.Point(1202, -3);
             this.btnback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(121, 103);
+            this.btnback.Size = new System.Drawing.Size(116, 103);
             this.btnback.TabIndex = 20;
             this.btnback.UseVisualStyleBackColor = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
@@ -325,6 +335,15 @@
             this.panel1.Size = new System.Drawing.Size(1321, 354);
             this.panel1.TabIndex = 78;
             // 
+            // lblma
+            // 
+            this.lblma.AutoSize = true;
+            this.lblma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblma.Location = new System.Drawing.Point(171, 132);
+            this.lblma.Name = "lblma";
+            this.lblma.Size = new System.Drawing.Size(0, 25);
+            this.lblma.TabIndex = 18;
+            // 
             // txtDiachincc
             // 
             this.txtDiachincc.Location = new System.Drawing.Point(163, 230);
@@ -350,7 +369,7 @@
             this.txtSdtncc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSdtncc.Multiline = true;
             this.txtSdtncc.Name = "txtSdtncc";
-            this.txtSdtncc.Size = new System.Drawing.Size(311, 48);
+            this.txtSdtncc.Size = new System.Drawing.Size(311, 51);
             this.txtSdtncc.TabIndex = 3;
             // 
             // panel2
@@ -362,17 +381,8 @@
             this.panel2.Location = new System.Drawing.Point(3, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1307, 100);
+            this.panel2.Size = new System.Drawing.Size(1318, 100);
             this.panel2.TabIndex = 0;
-            // 
-            // lblma
-            // 
-            this.lblma.AutoSize = true;
-            this.lblma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblma.Location = new System.Drawing.Point(171, 132);
-            this.lblma.Name = "lblma";
-            this.lblma.Size = new System.Drawing.Size(0, 25);
-            this.lblma.TabIndex = 18;
             // 
             // FrmNhaCungCap
             // 
@@ -382,6 +392,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmNhaCungCap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhà Cung Cấp";

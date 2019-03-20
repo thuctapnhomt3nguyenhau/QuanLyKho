@@ -224,9 +224,9 @@
             // 
             this.btnHuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.BackgroundImage")));
             this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHuy.Location = new System.Drawing.Point(1205, 373);
+            this.btnHuy.Location = new System.Drawing.Point(1167, 353);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(94, 81);
+            this.btnHuy.Size = new System.Drawing.Size(121, 101);
             this.btnHuy.TabIndex = 16;
             this.btnHuy.Text = "Tạo phiếu xuất mới";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -237,10 +237,12 @@
             // 
             this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(1100, 373);
+            this.btnXoa.Location = new System.Drawing.Point(1013, 353);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(94, 81);
+            this.btnXoa.Size = new System.Drawing.Size(133, 101);
             this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -272,10 +274,12 @@
             // 
             this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSua.Location = new System.Drawing.Point(992, 373);
+            this.btnSua.Location = new System.Drawing.Point(875, 353);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(94, 81);
+            this.btnSua.Size = new System.Drawing.Size(123, 101);
             this.btnSua.TabIndex = 14;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -283,10 +287,12 @@
             // 
             this.btnThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThem.BackgroundImage")));
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(883, 373);
+            this.btnThem.Location = new System.Drawing.Point(736, 353);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(94, 81);
+            this.btnThem.Size = new System.Drawing.Size(114, 101);
             this.btnThem.TabIndex = 13;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -294,10 +300,12 @@
             // 
             this.btnRefesh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefesh.BackgroundImage")));
             this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefesh.Location = new System.Drawing.Point(769, 373);
+            this.btnRefesh.Location = new System.Drawing.Point(597, 353);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(94, 81);
+            this.btnRefesh.Size = new System.Drawing.Size(121, 101);
             this.btnRefesh.TabIndex = 8;
+            this.btnRefesh.Text = "Refresh";
+            this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnRefesh.UseVisualStyleBackColor = true;
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
@@ -472,6 +480,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmXuatSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xuất Sản Phẩm";

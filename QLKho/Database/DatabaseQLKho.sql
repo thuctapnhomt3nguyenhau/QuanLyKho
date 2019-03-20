@@ -294,8 +294,6 @@ SELECT NHACUNGCAP.MA_NCC,TEN_NCC,DIACHI_NCC,SDT_NCC,WEBSITE_NCC
 FROM dbo.NHACUNGCAP JOIN dbo.SANPHAM  ON NHACUNGCAP.MA_NCC=SANPHAM.MA_NCC
 GO
 
-EXEC USP_GetDSNCC
-GO
 ------------GET ALL-------------
 CREATE PROC USP_GetallNCC
 AS
@@ -305,8 +303,6 @@ BEGIN
 END
 GO
 
-EXEC dbo.USP_GetallNCC
-GO
 ------THEM-----------
 CREATE PROC USP_InsertNCC
 	@TENNCC NVARCHAR(100),
@@ -358,15 +354,13 @@ BEGIN
 END
 GO
 
---------------Bảng Sản Phẩm------------------
-alter PROC SP_SANPHAM_GETALL
+------------------------------------------------Bảng Sản Phẩm------------------
+CREATE PROC SP_SANPHAM_GETALL
 AS
 BEGIN
 	SELECT *
 	FROM dbo.SANPHAM
 END
-GO
-EXEC dbo.SP_SANPHAM_GETALL
 GO
 
 
@@ -389,6 +383,7 @@ BEGIN
 	          )
 END
 GO
+
 --tạo thủ tục xóa:
 CREATE PROC SP_SANPHAM_DELETE
 	@MASP INT
@@ -397,6 +392,7 @@ BEGIN
 	DELETE dbo.SANPHAM WHERE MA_SP = @MASP
 END
 GO
+
 --tạo thủ tục update
 CREATE PROC SP_SANPHAM_UPDATE
 	@MASP INT,
@@ -412,7 +408,7 @@ BEGIN
 	WHERE MA_SP = @MASP
 END
 GO
-select * from SANPHAM
+
 ---TẠO PROC SEARCH
 CREATE PROC SP_SANPHAM_SEARCH
 	@SEARCHVALUE NVARCHAR(100)
@@ -428,5 +424,3 @@ BEGIN
 		OR (dbo.SANPHAM.SOLUONG LIKE N'%' + @SEARCHVALUE + '%')
 END
 GO
-select * from SANPHAM
-select * from NHACUNGCAP
