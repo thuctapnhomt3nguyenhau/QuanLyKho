@@ -49,11 +49,13 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\ThongKeDAO.cs" />
     <Compile Include="DAO\XuatKhoDAO.cs" />
     <Compile Include="DTO\MaNV_DTO.cs" />
     <Compile Include="DTO\NhaCungCapDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\TenSP_DTO.cs" />
+    <Compile Include="DTO\ThongKeDTO.cs" />
     <Compile Include="DTO\XuatKhoDTO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DTO\Ma_NccDTO.cs" />
@@ -94,6 +96,12 @@
     <Compile Include="GUI\FrmSanPham.Designer.cs">
       <DependentUpon>FrmSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmThongKe.Designer.cs">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmXuatSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmSanPham.resx">
       <DependentUpon>FrmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmThongKe.resx">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmXuatSanPham.resx">
       <DependentUpon>FrmXuatSanPham.cs</DependentUpon>

@@ -62,5 +62,13 @@ namespace QLKho
             f.ShowDialog();
             this.Show();
         }
+
+        private void btn_thongke_Click(object sender, EventArgs e)
+        {
+            FrmThongKe f = new FrmThongKe();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

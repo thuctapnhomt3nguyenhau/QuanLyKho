@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmenu));
             this.btnnhanvien = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_thongke = new System.Windows.Forms.Button();
             this.btnnhacungcap = new System.Windows.Forms.Button();
             this.btnthongke = new System.Windows.Forms.Button();
             this.btnxuatsanpham = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btn_thongke);
             this.panel1.Controls.Add(this.btnnhacungcap);
             this.panel1.Controls.Add(this.btnthongke);
             this.panel1.Controls.Add(this.btnxuatsanpham);
@@ -67,8 +69,23 @@
             this.panel1.Controls.Add(this.btnnhanvien);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1201, 688);
+            this.panel1.Size = new System.Drawing.Size(1235, 716);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_thongke
+            // 
+            this.btn_thongke.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_thongke.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_thongke.BackgroundImage")));
+            this.btn_thongke.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_thongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thongke.Location = new System.Drawing.Point(771, 87);
+            this.btn_thongke.Name = "btn_thongke";
+            this.btn_thongke.Size = new System.Drawing.Size(202, 172);
+            this.btn_thongke.TabIndex = 6;
+            this.btn_thongke.Text = "Thống Kê";
+            this.btn_thongke.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btn_thongke.UseVisualStyleBackColor = false;
+            this.btn_thongke.Click += new System.EventHandler(this.btn_thongke_Click);
             // 
             // btnnhacungcap
             // 
@@ -91,9 +108,9 @@
             this.btnthongke.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnthongke.BackgroundImage")));
             this.btnthongke.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnthongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthongke.Location = new System.Drawing.Point(771, 87);
+            this.btnthongke.Location = new System.Drawing.Point(456, 502);
             this.btnthongke.Name = "btnthongke";
-            this.btnthongke.Size = new System.Drawing.Size(202, 171);
+            this.btnthongke.Size = new System.Drawing.Size(310, 167);
             this.btnthongke.TabIndex = 2;
             this.btnthongke.Text = "Hướng Dẫn Sử Dụng";
             this.btnthongke.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -116,7 +133,7 @@
             // 
             // btnnhapsanpham
             // 
-            this.btnnhapsanpham.BackColor = System.Drawing.Color.White;
+            this.btnnhapsanpham.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnnhapsanpham.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnhapsanpham.BackgroundImage")));
             this.btnnhapsanpham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnnhapsanpham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 712);
+            this.ClientSize = new System.Drawing.Size(1259, 740);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -170,6 +187,7 @@
         private System.Windows.Forms.Button btnxuatsanpham;
         private System.Windows.Forms.Button btnnhapsanpham;
         private System.Windows.Forms.Button btnnhacungcap;
+        private System.Windows.Forms.Button btn_thongke;
     }
 }
 

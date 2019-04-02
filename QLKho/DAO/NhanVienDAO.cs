@@ -31,11 +31,6 @@ namespace QLKho.DAO
 
         }
 
-        internal object GetNcc()
-        {
-            throw new NotImplementedException();
-        }
-
         public bool InseartNV(string TENNV , int SDT, string EMAIL)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("EXEC SP_NHANVIEN_INSERT @TENNV , @SDT , @EMAIL", new object[] { TENNV, SDT, EMAIL});
