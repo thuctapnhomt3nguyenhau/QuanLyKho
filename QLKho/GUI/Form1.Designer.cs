@@ -124,7 +124,7 @@
             this.btnnhapsanpham.Name = "btnnhapsanpham";
             this.btnnhapsanpham.Size = new System.Drawing.Size(208, 172);
             this.btnnhapsanpham.TabIndex = 4;
-            this.btnnhapsanpham.Text = "Nhập Sản Phẩm";
+            this.btnnhapsanpham.Text = "Phiếu Nhập";
             this.btnnhapsanpham.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnnhapsanpham.UseVisualStyleBackColor = false;
             this.btnnhapsanpham.Click += new System.EventHandler(this.btnnhapsanpham_Click);

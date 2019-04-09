@@ -20,7 +20,7 @@ namespace QLKho.DAO
 
         private DataProvider() { }
 
-        string connectionSTR = @"Data Source=(local);Initial Catalog=TT_QLKHO;Integrated Security=True";
+        string connectionSTR = @"Data Source=VTP-NGUYENHIEU\SQLEXPRESS;Initial Catalog=TT_QLKHO;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

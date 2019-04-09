@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLKho.GUI
 {
-    public partial class FrmNhapSanPham_CT : Form
+    public partial class FrmPhieuNhapCT : Form
     {
-        public FrmNhapSanPham_CT()
+        public FrmPhieuNhapCT()
         {
             InitializeComponent();
         }

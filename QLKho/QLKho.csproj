@@ -46,13 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CTPhieuNhapDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="DAO\XuatKhoDAO.cs" />
     <Compile Include="DTO\MaNV_DTO.cs" />
     <Compile Include="DTO\NhaCungCapDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\CTPhieuNhapDTO.cs" />
+    <Compile Include="DTO\PhieuNhapDTO.cs" />
     <Compile Include="DTO\TenSP_DTO.cs" />
     <Compile Include="DTO\XuatKhoDTO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
@@ -76,17 +80,17 @@
     <Compile Include="GUI\FrmNhanVien.Designer.cs">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FrmNhapSanPham.cs">
+    <Compile Include="GUI\FrmPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FrmNhapSanPham.Designer.cs">
-      <DependentUpon>FrmNhapSanPham.cs</DependentUpon>
+    <Compile Include="GUI\FrmPhieuNhap.Designer.cs">
+      <DependentUpon>FrmPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FrmNhapSanPham_CT.cs">
+    <Compile Include="GUI\FrmPhieuNhapCT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FrmNhapSanPham_CT.Designer.cs">
-      <DependentUpon>FrmNhapSanPham_CT.cs</DependentUpon>
+    <Compile Include="GUI\FrmPhieuNhapCT.Designer.cs">
+      <DependentUpon>FrmPhieuNhapCT.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmSanPham.cs">
       <SubType>Form</SubType>
@@ -111,11 +115,11 @@
     <EmbeddedResource Include="GUI\FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FrmNhapSanPham.resx">
-      <DependentUpon>FrmNhapSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FrmPhieuNhap.resx">
+      <DependentUpon>FrmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FrmNhapSanPham_CT.resx">
-      <DependentUpon>FrmNhapSanPham_CT.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FrmPhieuNhapCT.resx">
+      <DependentUpon>FrmPhieuNhapCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmSanPham.resx">
       <DependentUpon>FrmSanPham.cs</DependentUpon>
