@@ -18,13 +18,24 @@ namespace QLKho.DAO
             private set { instance = value; }
         }
 
-        public List<CTPhieuNhapDTO> GetAll()
+        public List<CTPhieuNhapDTO> GetById(int maPhieuNhap)
         {
             List<CTPhieuNhapDTO> list = new List<CTPhieuNhapDTO>();
-            DataTable table = DataProvider.Instance.ExecuteQuery("SP_CTPhieuNhap_GetAll");
+            DataTable table = DataProvider.Instance.ExecuteQuery("SP_CTPhieuNhap_GetAll @maPhieuNhap", new object[] { maPhieuNhap});
             foreach(DataRow row in table.Rows)
             {
                 list.Add(new CTPhieuNhapDTO(row));
+            }
+            return list;
+        }
+
+        public List<MaSanPhamDTO> GetMaSanPham()
+        {
+            List<MaSanPhamDTO> list = new List<MaSanPhamDTO>();
+            DataTable table = DataProvider.Instance.ExecuteQuery("Select MA_SP from SanPham");
+            foreach(DataRow row in table.Rows)
+            {
+                list.Add(new MaSanPhamDTO(row));
             }
             return list;
         }
@@ -41,16 +52,16 @@ namespace QLKho.DAO
             return rowEffected > 0;
         }
 
-        public bool Update(int maChiTietPhieuNhap, int maPhieuNhap, int maSanPham, int soLuong, int donGia)
+        public bool Update(int maChiTietPhieuNhap, int maPhieuNhap, int maSanPham, int soLuong, float donGia)
         {
-            int rowEffected = DataProvider.Instance.ExecuteNonQuery("SP_CTPhieuNhap_Update @maChiTietPhieuNhap , @maPhieuNhap , @maSanPham , @soLuong , @donGia float", new object[] { maChiTietPhieuNhap, maPhieuNhap, maSanPham, soLuong, donGia });
+            int rowEffected = DataProvider.Instance.ExecuteNonQuery("SP_CTPhieuNhap_Update @maChiTietPhieuNhap , @maPhieuNhap , @maSanPham , @soLuong , @donGia ", new object[] { maChiTietPhieuNhap, maPhieuNhap, maSanPham, soLuong, donGia });
             return rowEffected > 0;
         }
 
-        public List<CTPhieuNhapDTO> Search(string searchValue)
+        public List<CTPhieuNhapDTO> Search(string searchValue, int maChiTietPhieuNhap)
         {
             List<CTPhieuNhapDTO> list = new List<CTPhieuNhapDTO>();
-            DataTable table = DataProvider.Instance.ExecuteQuery("SP_CTPhieuNhap_Search @searchValue", new object[] { searchValue });
+            DataTable table = DataProvider.Instance.ExecuteQuery("SP_CTPhieuNhap_Search @searchValue , @maChiTietPhieuNhap", new object[] { searchValue, maChiTietPhieuNhap});
             foreach(DataRow row in table.Rows)
             {
                 list.Add(new CTPhieuNhapDTO(row));

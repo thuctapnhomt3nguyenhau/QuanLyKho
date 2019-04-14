@@ -449,6 +449,8 @@ create procedure SP_PhieuNhap_Delete
 	@maPhieuNhap int
 as
 begin
+	delete CT_PHIEUNHAP 
+	where MA_PN = @maPhieuNhap
 	delete PHIEUNHAP 
 	where MA_PN = @maPhieuNhap
 end
@@ -481,13 +483,15 @@ go
 
 -------------------Chi tiết phiếu nhập-----------------
 
-create procedure SP_CTPhieuNhap_GetAll
+create procedure SP_CTPhieuNhap_GetAll 
+	@maPhieuNhap int
 as
 begin
 	select * from CT_PHIEUNHAP
+	where MA_PN = @maPhieuNhap
 end
 go
-
+SP_CTPhieuNhap_GetAll 1
 create procedure SP_CTPhieuNhap_Insert
 	@maPhieuNhap int,
 	@maSanPham int,
@@ -524,7 +528,8 @@ end
 go
 
 create procedure SP_CTPhieuNhap_Search
-	@searchValue nvarchar(50)
+	@searchValue nvarchar(50),
+	@maChiTietPhieuNhap int
 as
 begin
 	select * from CT_PHIEUNHAP
@@ -533,6 +538,6 @@ begin
 	or MA_SP like N'%'+ @searchValue + '%'
 	or SOLUONG like N'%'+ @searchValue + '%'
 	or DONGIA like N'%'+ @searchValue + '%'
-
+	and MA_CTPN = @maChiTietPhieuNhap
 end
 go

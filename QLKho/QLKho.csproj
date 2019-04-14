@@ -53,6 +53,7 @@
     <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="DAO\XuatKhoDAO.cs" />
     <Compile Include="DTO\MaNV_DTO.cs" />
+    <Compile Include="DTO\MaSanPhamDTO.cs" />
     <Compile Include="DTO\NhaCungCapDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\CTPhieuNhapDTO.cs" />

@@ -28,6 +28,29 @@ namespace QLKho.DAO
             return list;
         }
 
+        public List<MaNV_DTO> GetListMaNhanVien()
+        {
+            List<MaNV_DTO> list = new List<MaNV_DTO>();
+            DataTable table = DataProvider.Instance.ExecuteQuery("Select MA_NV from NhanVien");
+            foreach(DataRow row in table.Rows)
+            {
+                list.Add(new MaNV_DTO(row));
+            }
+            return list;
+
+        }
+
+        public List<Ma_NccDTO> GetListMaNhaCungCap()
+        {
+            List<Ma_NccDTO> list = new List<Ma_NccDTO>();
+            DataTable table = DataProvider.Instance.ExecuteQuery("Select MA_NCC from NhaCungCap");
+            foreach(DataRow row in table.Rows)
+            {
+                list.Add(new Ma_NccDTO(row));
+            }
+            return list;
+        }
+
         public bool Insert(int maNhanVien, int nhaCungCap, DateTime ngayNhap)
         {
             int rowEffected = DataProvider.Instance.ExecuteNonQuery("SP_PhieuNhap_Insert @maNhanVien , @maNhaCungCap , @ngayNhap", new object[] { maNhanVien, nhaCungCap, ngayNhap });

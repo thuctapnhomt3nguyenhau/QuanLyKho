@@ -48,6 +48,11 @@
             this.btnback = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvDanhSachPhieuNhap = new System.Windows.Forms.DataGridView();
+            this.MaPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMaPhieu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +64,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lblMaPhieu);
             this.panel1.Controls.Add(this.btnChiTietPhieuNhap);
             this.panel1.Controls.Add(this.cboMaNhanVien);
             this.panel1.Controls.Add(this.dtpNgaynhap);
@@ -165,6 +171,7 @@
             this.btnXoa.Text = "Xoá";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -203,6 +210,7 @@
             this.btnRefesh.Text = "Refresh";
             this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // panel2
             // 
@@ -260,12 +268,51 @@
             // 
             this.dgvDanhSachPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSachPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaPhieuNhap,
+            this.MaNhanVien,
+            this.MaNhaCungCap,
+            this.NgayNhap});
             this.dgvDanhSachPhieuNhap.Location = new System.Drawing.Point(3, 4);
             this.dgvDanhSachPhieuNhap.Name = "dgvDanhSachPhieuNhap";
             this.dgvDanhSachPhieuNhap.RowHeadersVisible = false;
             this.dgvDanhSachPhieuNhap.RowTemplate.Height = 24;
             this.dgvDanhSachPhieuNhap.Size = new System.Drawing.Size(1306, 432);
             this.dgvDanhSachPhieuNhap.TabIndex = 0;
+            // 
+            // MaPhieuNhap
+            // 
+            this.MaPhieuNhap.DataPropertyName = "MaPhieuNhap";
+            this.MaPhieuNhap.HeaderText = "Mã phiếu nhập";
+            this.MaPhieuNhap.Name = "MaPhieuNhap";
+            // 
+            // MaNhanVien
+            // 
+            this.MaNhanVien.DataPropertyName = "MaNhanVien";
+            this.MaNhanVien.HeaderText = "Mã nhân viên";
+            this.MaNhanVien.Name = "MaNhanVien";
+            // 
+            // MaNhaCungCap
+            // 
+            this.MaNhaCungCap.DataPropertyName = "MaNhaCungCap";
+            this.MaNhaCungCap.HeaderText = "Mã nhà cung cấp";
+            this.MaNhaCungCap.Name = "MaNhaCungCap";
+            // 
+            // NgayNhap
+            // 
+            this.NgayNhap.DataPropertyName = "NgayNhap";
+            this.NgayNhap.HeaderText = "Ngày nhập";
+            this.NgayNhap.Name = "NgayNhap";
+            // 
+            // lblMaPhieu
+            // 
+            this.lblMaPhieu.AutoSize = true;
+            this.lblMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaPhieu.Location = new System.Drawing.Point(239, 148);
+            this.lblMaPhieu.Name = "lblMaPhieu";
+            this.lblMaPhieu.Size = new System.Drawing.Size(24, 25);
+            this.lblMaPhieu.TabIndex = 28;
+            this.lblMaPhieu.Text = "0";
             // 
             // FrmPhieuNhap
             // 
@@ -310,5 +357,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnChiTietPhieuNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNhaCungCap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
+        private System.Windows.Forms.Label lblMaPhieu;
     }
 }
