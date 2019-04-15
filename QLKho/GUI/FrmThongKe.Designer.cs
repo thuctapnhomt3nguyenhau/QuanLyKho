@@ -204,7 +204,7 @@
             this.dgvthongke.RowHeadersVisible = false;
             this.dgvthongke.RowTemplate.Height = 24;
             this.dgvthongke.Size = new System.Drawing.Size(1337, 370);
-            this.dgvthongke.TabIndex = 0;       
+            this.dgvthongke.TabIndex = 0;
             // 
             // MASP
             // 
@@ -250,6 +250,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
