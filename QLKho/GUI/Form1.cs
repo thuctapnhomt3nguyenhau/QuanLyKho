@@ -49,7 +49,7 @@ namespace QLKho
 
         private void btnnhapsanpham_Click(object sender, EventArgs e)
         {
-            FrmNhapSanPham f = new FrmNhapSanPham();
+            FrmPhieuNhap f = new FrmPhieuNhap();
             this.Hide();
             f.ShowDialog();
             this.Show();

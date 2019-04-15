@@ -47,3 +47,4 @@ E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.GenerateResource.cache
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.CoreCompileInputs.cache
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.exe
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.pdb
+

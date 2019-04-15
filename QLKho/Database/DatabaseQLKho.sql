@@ -466,3 +466,118 @@ GO
 
 
 
+----------------------Phiếu nhập---------------------------------
+create procedure SP_PhieuNhap_GetAll
+as
+begin
+	select * from PHIEUNHAP
+end
+go
+
+create procedure SP_PhieuNhap_Insert
+	@maNhanVien int,
+	@maNhaCungCap int,
+	@ngayNhap date
+as
+begin
+	insert into PHIEUNHAP(MA_NV, MA_NCC, NGAYNHAP)
+	values(@maNhanVien, @maNhaCungCap, @ngayNhap)
+end	
+go
+
+create procedure SP_PhieuNhap_Delete
+	@maPhieuNhap int
+as
+begin
+	delete CT_PHIEUNHAP 
+	where MA_PN = @maPhieuNhap
+	delete PHIEUNHAP 
+	where MA_PN = @maPhieuNhap
+end
+go
+
+create procedure SP_PhieuNhap_Update
+	@maPhieuNhap int,
+	@maNhanVien int,
+	@maNhaCungCap int,
+	@ngayNhap date
+as
+begin
+	update PHIEUNHAP 
+	set MA_NV = @maNhanVien, MA_NCC = @maNhaCungCap, NGAYNHAP = @ngayNhap
+	where MA_PN = @maPhieuNhap
+end
+go
+
+create procedure SP_PhieuNhap_Search
+	@searchValue nvarchar(50)
+as
+begin
+	select * from PHIEUNHAP
+	where MA_PN like N'%' + @searchValue +'%'
+	or MA_NV like N'%' + @searchValue +'%'
+	or MA_NCC like N'%' + @searchValue +'%'
+	or NGAYNHAP like N'%' + @searchValue +'%'
+end
+go
+
+-------------------Chi tiết phiếu nhập-----------------
+
+create procedure SP_CTPhieuNhap_GetAll 
+	@maPhieuNhap int
+as
+begin
+	select * from CT_PHIEUNHAP
+	where MA_PN = @maPhieuNhap
+end
+go
+SP_CTPhieuNhap_GetAll 1
+create procedure SP_CTPhieuNhap_Insert
+	@maPhieuNhap int,
+	@maSanPham int,
+	@soLuong int,
+	@donGia float
+as
+begin
+	insert into CT_PHIEUNHAP(MA_PN, MA_SP, SOLUONG, DONGIA)
+	values(@maPhieuNhap, @maSanPham, @soLuong, @donGia)
+end
+go
+
+create procedure SP_CTPhieuNhap_Delete
+	@maChiTietPhieuNhap int
+as
+begin
+	delete CT_PHIEUNHAP
+	where MA_CTPN = @maChiTietPhieuNhap
+end
+go
+
+create procedure SP_CTPhieuNhap_Update
+	@maChiTietPhieuNhap int,
+	@maPhieuNhap int,
+	@maSanPham int,
+	@soLuong int,
+	@donGia float
+as
+begin
+	update CT_PHIEUNHAP
+	set MA_SP = @maSanPham, MA_PN = @maPhieuNhap, SOLUONG = @soLuong, DONGIA = @donGia
+	where MA_CTPN = @maChiTietPhieuNhap
+end
+go
+
+create procedure SP_CTPhieuNhap_Search
+	@searchValue nvarchar(50),
+	@maChiTietPhieuNhap int
+as
+begin
+	select * from CT_PHIEUNHAP
+	where MA_CTPN like N'%'+ @searchValue + '%'
+	or MA_PN like N'%'+ @searchValue + '%'
+	or MA_SP like N'%'+ @searchValue + '%'
+	or SOLUONG like N'%'+ @searchValue + '%'
+	or DONGIA like N'%'+ @searchValue + '%'
+	and MA_CTPN = @maChiTietPhieuNhap
+end
+go
