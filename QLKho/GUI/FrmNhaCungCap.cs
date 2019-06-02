@@ -48,7 +48,7 @@ namespace QLKho.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Bạn có thật sự muốn thêm nhà cũng cấp có tên là : " + txtTenncc.Text, "Thông Báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) ;
+            if (MessageBox.Show("Bạn có thật sự muốn thêm nhà cũng cấp có tên là : " + txtTenncc.Text, "Thông Báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
                 if (txtTenncc.Text == "" || txtDiachincc.Text == "" || txtSdtncc.Text == "" || txtWebncc.Text == "")
                 {
@@ -98,7 +98,7 @@ namespace QLKho.GUI
                 else
                 {
                     int MaNCC;
-                    Int32.TryParse(lblMancc.Text, out MaNCC);
+                    Int32.TryParse(lblma.Text, out MaNCC);
                     string TenNCC = txtTenncc.Text;
                     string DiachiNCC = txtDiachincc.Text;
                     int SdtNCC;
@@ -123,7 +123,7 @@ namespace QLKho.GUI
             if (MessageBox.Show("Bạn có thật sự muốn xóa nhà cung cấp có tên là: " + txtTenncc.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
                 int MaNCC;
-                Int32.TryParse(lblMancc.Text, out MaNCC);
+                Int32.TryParse(lblma.Text, out MaNCC);
                 if (NhaCungCapDAO.Instance.DeleteNCC(MaNCC))
                 {
                     MessageBox.Show("Xóa nhà cung cấp thành công! ");

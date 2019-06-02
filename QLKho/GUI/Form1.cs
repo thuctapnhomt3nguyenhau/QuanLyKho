@@ -41,7 +41,7 @@ namespace QLKho
 
         private void btnsanpham_Click(object sender, EventArgs e)
         {
-            FrmSanPham f = new FrmSanPham();
+            FrmKhoSanPham f = new FrmKhoSanPham();
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -66,6 +66,14 @@ namespace QLKho
         private void btn_thongke_Click(object sender, EventArgs e)
         {
             FrmThongKe f = new FrmThongKe();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btngiay_Click(object sender, EventArgs e)
+        {
+            FrmTTSanPham f = new FrmTTSanPham();
             this.Hide();
             f.ShowDialog();
             this.Show();

@@ -37,9 +37,6 @@ E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.csprojAssemblyReference.cache
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.frmmenu.resources
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhaCungCap.resources
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhanVien.resources
-E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham.resources
-E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmNhapSanPham_CT.resources
-E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmSanPham.resources
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmThongKe.resources
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmXuatSanPham.resources
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.Properties.Resources.resources
@@ -47,4 +44,7 @@ E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.GenerateResource.cache
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.csproj.CoreCompileInputs.cache
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.exe
 E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.pdb
-
+E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmPhieuNhap.resources
+E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmPhieuNhapCT.resources
+E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmKhoSanPham.resources
+E:\TT_Nhom\QuanLyKho\QLKho\obj\Debug\QLKho.GUI.FrmTTSanPham.resources

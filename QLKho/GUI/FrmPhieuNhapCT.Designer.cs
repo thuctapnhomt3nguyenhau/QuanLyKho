@@ -32,6 +32,11 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnRefesh = new System.Windows.Forms.Button();
             this.dgvChiTietPhieuNhap = new System.Windows.Forms.DataGridView();
+            this.MaChiTietPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,19 +51,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMaChiTietPhieuNhap = new System.Windows.Forms.Label();
+            this.lblMaPhieuNhap = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cboMaSanPhan = new System.Windows.Forms.ComboBox();
-            this.MaChiTietPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblMaPhieuNhap = new System.Windows.Forms.Label();
-            this.lblMaChiTietPhieuNhap = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPhieuNhap)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,6 +108,36 @@
             this.dgvChiTietPhieuNhap.RowTemplate.Height = 24;
             this.dgvChiTietPhieuNhap.Size = new System.Drawing.Size(1310, 331);
             this.dgvChiTietPhieuNhap.TabIndex = 0;
+            // 
+            // MaChiTietPhieuNhap
+            // 
+            this.MaChiTietPhieuNhap.DataPropertyName = "MaChiTietPhieuNhap";
+            this.MaChiTietPhieuNhap.HeaderText = "Mã Chi Tiết Phiếu Nhập";
+            this.MaChiTietPhieuNhap.Name = "MaChiTietPhieuNhap";
+            // 
+            // MaPhieuNhap
+            // 
+            this.MaPhieuNhap.DataPropertyName = "MaPhieuNhap";
+            this.MaPhieuNhap.HeaderText = "Mã Phiếu Nhập";
+            this.MaPhieuNhap.Name = "MaPhieuNhap";
+            // 
+            // MaSanPham
+            // 
+            this.MaSanPham.DataPropertyName = "MaSanPham";
+            this.MaSanPham.HeaderText = "Mã Sản Phẩm";
+            this.MaSanPham.Name = "MaSanPham";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
             // 
             // panel3
             // 
@@ -278,6 +308,36 @@
             this.panel1.Size = new System.Drawing.Size(1307, 471);
             this.panel1.TabIndex = 84;
             // 
+            // lblMaChiTietPhieuNhap
+            // 
+            this.lblMaChiTietPhieuNhap.AutoSize = true;
+            this.lblMaChiTietPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaChiTietPhieuNhap.Location = new System.Drawing.Point(301, 144);
+            this.lblMaChiTietPhieuNhap.Name = "lblMaChiTietPhieuNhap";
+            this.lblMaChiTietPhieuNhap.Size = new System.Drawing.Size(24, 25);
+            this.lblMaChiTietPhieuNhap.TabIndex = 26;
+            this.lblMaChiTietPhieuNhap.Text = "0";
+            // 
+            // lblMaPhieuNhap
+            // 
+            this.lblMaPhieuNhap.AutoSize = true;
+            this.lblMaPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaPhieuNhap.Location = new System.Drawing.Point(221, 202);
+            this.lblMaPhieuNhap.Name = "lblMaPhieuNhap";
+            this.lblMaPhieuNhap.Size = new System.Drawing.Size(24, 25);
+            this.lblMaPhieuNhap.TabIndex = 25;
+            this.lblMaPhieuNhap.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(42, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(242, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Mã Chi Tiết Phiếu Nhập";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -321,66 +381,6 @@
             this.cboMaSanPhan.Name = "cboMaSanPhan";
             this.cboMaSanPhan.Size = new System.Drawing.Size(157, 24);
             this.cboMaSanPhan.TabIndex = 2;
-            // 
-            // MaChiTietPhieuNhap
-            // 
-            this.MaChiTietPhieuNhap.DataPropertyName = "MaChiTietPhieuNhap";
-            this.MaChiTietPhieuNhap.HeaderText = "Mã Chi Tiết Phiếu Nhập";
-            this.MaChiTietPhieuNhap.Name = "MaChiTietPhieuNhap";
-            // 
-            // MaPhieuNhap
-            // 
-            this.MaPhieuNhap.DataPropertyName = "MaPhieuNhap";
-            this.MaPhieuNhap.HeaderText = "Mã Phiếu Nhập";
-            this.MaPhieuNhap.Name = "MaPhieuNhap";
-            // 
-            // MaSanPham
-            // 
-            this.MaSanPham.DataPropertyName = "MaSanPham";
-            this.MaSanPham.HeaderText = "Mã Sản Phẩm";
-            this.MaSanPham.Name = "MaSanPham";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 25);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Mã Chi Tiết Phiếu Nhập";
-            // 
-            // lblMaPhieuNhap
-            // 
-            this.lblMaPhieuNhap.AutoSize = true;
-            this.lblMaPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaPhieuNhap.Location = new System.Drawing.Point(221, 202);
-            this.lblMaPhieuNhap.Name = "lblMaPhieuNhap";
-            this.lblMaPhieuNhap.Size = new System.Drawing.Size(24, 25);
-            this.lblMaPhieuNhap.TabIndex = 25;
-            this.lblMaPhieuNhap.Text = "0";
-            // 
-            // lblMaChiTietPhieuNhap
-            // 
-            this.lblMaChiTietPhieuNhap.AutoSize = true;
-            this.lblMaChiTietPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaChiTietPhieuNhap.Location = new System.Drawing.Point(221, 144);
-            this.lblMaChiTietPhieuNhap.Name = "lblMaChiTietPhieuNhap";
-            this.lblMaChiTietPhieuNhap.Size = new System.Drawing.Size(24, 25);
-            this.lblMaChiTietPhieuNhap.TabIndex = 26;
-            this.lblMaChiTietPhieuNhap.Text = "0";
             // 
             // FrmPhieuNhapCT
             // 

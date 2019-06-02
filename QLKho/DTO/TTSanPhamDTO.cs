@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 
 namespace QLKho.DTO
 {
-    class SanPhamDTO
+    class TTSanPhamDTO
     {
-        private int maSP;      
+        private int maSP;
         private string tenSP;
         private int maNCC;
         private string tsKT;
         private float gia;
-        private int soLUONG;
         private string tenNCC;
 
         public int MaSP { get => maSP; set => maSP = value; }
@@ -22,26 +21,23 @@ namespace QLKho.DTO
         public int MaNCC { get => maNCC; set => maNCC = value; }
         public string TsKT { get => tsKT; set => tsKT = value; }
         public float Gia { get => gia; set => gia = value; }
-        public int SoLUONG { get => soLUONG; set => soLUONG = value; }
         public string TenNCC { get => tenNCC; set => tenNCC = value; }
 
-        public SanPhamDTO(int maSP, string tenSP, int maNCC, string tsKT, float gia, int soLUONG, string tenNCC)
+        public TTSanPhamDTO(int maSP, string tenSP, int maNCC, string tsKT, float gia, string tenNCC)
         {
             this.maSP = maSP;
             this.tenSP = tenSP;
             this.maNCC = maNCC;
             this.tsKT = tsKT;
             this.gia = gia;
-            this.soLUONG = soLUONG;
             this.tenNCC = tenNCC;
         }
-        public SanPhamDTO(DataRow row)
+        public TTSanPhamDTO(DataRow row)
         {
             Int32.TryParse(row["MA_SP"].ToString(), out this.maSP);
             this.tenSP = row["TEN_SP"].ToString();
             Int32.TryParse(row["MA_NCC"].ToString(), out this.maNCC);
             this.tsKT = row["THONGSO_KT"].ToString();
-            Int32.TryParse(row["SOLUONG"].ToString(), out this.soLUONG);
             float.TryParse(row["GIA"].ToString(), out this.gia);
             this.tenNCC = row["TEN_NCC"].ToString();
         }

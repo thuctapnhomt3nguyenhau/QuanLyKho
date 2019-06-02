@@ -13,7 +13,7 @@ namespace QLKho.DTO
         private string tenSP;
         private int soLuong;
         private float donGia;
-        private float thanhTien;
+        private decimal thanhTien;
         private DateTime ngayXuat;
 
 
@@ -21,10 +21,10 @@ namespace QLKho.DTO
         public string TenSP { get => tenSP; set => tenSP = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public float DonGia { get => donGia; set => donGia = value; }
-        public float ThanhTien { get => thanhTien; set => thanhTien = value; }
+        public decimal ThanhTien { get => thanhTien; set => thanhTien = value; }
         public DateTime NgayXuat { get => ngayXuat; set => ngayXuat = value; }
 
-        public ThongKeDTO(int maSP, string tenSP, int soLuong, float donGia, float thanhTien, DateTime ngayXuat)
+        public ThongKeDTO(int maSP, string tenSP, int soLuong, float donGia, decimal thanhTien, DateTime ngayXuat)
         {
             this.maSP = maSP;
             this.tenSP = tenSP;
@@ -40,7 +40,7 @@ namespace QLKho.DTO
             this.tenSP = row["TEN_SP"].ToString();
             Int32.TryParse(row["TONGSL"].ToString(), out this.soLuong);
             float.TryParse(row["DONGIA"].ToString(), out this.donGia);
-            float.TryParse(row["THANHTIEN"].ToString(), out this.thanhTien);
+            decimal.TryParse(row["THANHTIEN"].ToString(), out this.thanhTien);
             DateTime.TryParse(row["NGAYXUAT"].ToString(), out this.ngayXuat);
         }
     }

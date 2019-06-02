@@ -52,10 +52,10 @@ namespace QLKho.GUI
         public void tinhtongtien()
         {
             int sc = dgvthongke.Rows.Count;
-            float tongtien = 0;
+            decimal tongtien = 0;
             for(int i=0 ; i <= sc-1; i++ )
             {
-                tongtien += float.Parse(dgvthongke.Rows[i].Cells["THANHTIEN"].Value.ToString());
+                tongtien += decimal.Parse(dgvthongke.Rows[i].Cells["THANHTIEN"].Value.ToString());
             }
             lblsum.Text = tongtien.ToString();
 

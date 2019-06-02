@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmenu));
             this.btnnhanvien = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btngiay = new System.Windows.Forms.Button();
             this.btn_thongke = new System.Windows.Forms.Button();
             this.btnnhacungcap = new System.Windows.Forms.Button();
             this.btnthongke = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btngiay);
             this.panel1.Controls.Add(this.btn_thongke);
             this.panel1.Controls.Add(this.btnnhacungcap);
             this.panel1.Controls.Add(this.btnthongke);
@@ -72,15 +74,30 @@
             this.panel1.Size = new System.Drawing.Size(1235, 716);
             this.panel1.TabIndex = 0;
             // 
+            // btngiay
+            // 
+            this.btngiay.BackColor = System.Drawing.Color.White;
+            this.btngiay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btngiay.BackgroundImage")));
+            this.btngiay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btngiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngiay.Location = new System.Drawing.Point(771, 87);
+            this.btngiay.Name = "btngiay";
+            this.btngiay.Size = new System.Drawing.Size(208, 172);
+            this.btngiay.TabIndex = 7;
+            this.btngiay.Text = "Sản Phẩm";
+            this.btngiay.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btngiay.UseVisualStyleBackColor = false;
+            this.btngiay.Click += new System.EventHandler(this.btngiay_Click);
+            // 
             // btn_thongke
             // 
             this.btn_thongke.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_thongke.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_thongke.BackgroundImage")));
             this.btn_thongke.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_thongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thongke.Location = new System.Drawing.Point(771, 87);
+            this.btn_thongke.Location = new System.Drawing.Point(634, 498);
             this.btn_thongke.Name = "btn_thongke";
-            this.btn_thongke.Size = new System.Drawing.Size(202, 172);
+            this.btn_thongke.Size = new System.Drawing.Size(339, 172);
             this.btn_thongke.TabIndex = 6;
             this.btn_thongke.Text = "Thống Kê";
             this.btn_thongke.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -108,9 +125,9 @@
             this.btnthongke.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnthongke.BackgroundImage")));
             this.btnthongke.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnthongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthongke.Location = new System.Drawing.Point(456, 502);
+            this.btnthongke.Location = new System.Drawing.Point(261, 502);
             this.btnthongke.Name = "btnthongke";
-            this.btnthongke.Size = new System.Drawing.Size(310, 167);
+            this.btnthongke.Size = new System.Drawing.Size(343, 167);
             this.btnthongke.TabIndex = 2;
             this.btnthongke.Text = "Hướng Dẫn Sử Dụng";
             this.btnthongke.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -141,7 +158,7 @@
             this.btnnhapsanpham.Name = "btnnhapsanpham";
             this.btnnhapsanpham.Size = new System.Drawing.Size(208, 172);
             this.btnnhapsanpham.TabIndex = 4;
-            this.btnnhapsanpham.Text = "Phiếu Nhập";
+            this.btnnhapsanpham.Text = "Nhập Sản Phẩm";
             this.btnnhapsanpham.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnnhapsanpham.UseVisualStyleBackColor = false;
             this.btnnhapsanpham.Click += new System.EventHandler(this.btnnhapsanpham_Click);
@@ -156,7 +173,7 @@
             this.btnsanpham.Name = "btnsanpham";
             this.btnsanpham.Size = new System.Drawing.Size(208, 172);
             this.btnsanpham.TabIndex = 3;
-            this.btnsanpham.Text = "Kho Sản Phẩm";
+            this.btnsanpham.Text = "Quản Lý Kho ";
             this.btnsanpham.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnsanpham.UseVisualStyleBackColor = false;
             this.btnsanpham.Click += new System.EventHandler(this.btnsanpham_Click);
@@ -188,6 +205,7 @@
         private System.Windows.Forms.Button btnnhapsanpham;
         private System.Windows.Forms.Button btnnhacungcap;
         private System.Windows.Forms.Button btn_thongke;
+        private System.Windows.Forms.Button btngiay;
     }
 }
 
