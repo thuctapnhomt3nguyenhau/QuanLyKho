@@ -40,6 +40,18 @@ namespace QLKho.DAO
             return list;
         }
 
+        public List<TenSP_DTO> GetListTenSP()
+        {
+            List<TenSP_DTO> maNVList = new List<TenSP_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT TEN_SP FROM dbo.SANPHAM");
+            foreach (DataRow item in data.Rows)
+            {
+                TenSP_DTO manv = new TenSP_DTO(item);
+                maNVList.Add(manv);
+            }
+            return maNVList;
+        }
+
         public bool Insert(int maPhieuNhap, int maSanPham, int soLuong, float donGia)
         {
             int rowEffected = DataProvider.Instance.ExecuteNonQuery("SP_CTPhieuNhap_Insert @maPhieuNhap , @maSanPham , @soLuong , @donGia", new object[] { maPhieuNhap, maSanPham, soLuong, donGia });

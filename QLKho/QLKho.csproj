@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CSDL\SangT5_Nhom1_QLBanHangDienMay\SangT5_Nhom1_QLBanHangDienMay\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CSDL\SangT5_Nhom1_QLBanHangDienMay\SangT5_Nhom1_QLBanHangDienMay\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +64,16 @@
     <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="DAO\TTSanPhamDAO.cs" />
     <Compile Include="DAO\XuatKhoDAO.cs" />
+    <Compile Include="DataSet_NhapSanPham.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_NhapSanPham.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_XuatSanPham.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_XuatSanPham.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTO\MaNV_DTO.cs" />
     <Compile Include="DTO\MaSanPhamDTO.cs" />
     <Compile Include="DTO\NhaCungCapDTO.cs" />
@@ -85,6 +105,12 @@
     <Compile Include="GUI\FrmNhanVien.Designer.cs">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmNhapReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmNhapReport.Designer.cs">
+      <DependentUpon>FrmNhapReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +141,12 @@
     <Compile Include="GUI\FrmThongKe.Designer.cs">
       <DependentUpon>FrmThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmXuatReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmXuatReport.Designer.cs">
+      <DependentUpon>FrmXuatReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmXuatSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +164,9 @@
     <EmbeddedResource Include="GUI\FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmNhapReport.resx">
+      <DependentUpon>FrmNhapReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmPhieuNhap.resx">
       <DependentUpon>FrmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +182,9 @@
     <EmbeddedResource Include="GUI\FrmThongKe.resx">
       <DependentUpon>FrmThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmXuatReport.resx">
+      <DependentUpon>FrmXuatReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmXuatSanPham.resx">
       <DependentUpon>FrmXuatSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +197,30 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report_Nhap.rdlc" />
+    <EmbeddedResource Include="Report_Xuat.rdlc" />
+    <None Include="DataSet_NhapSanPham.xsc">
+      <DependentUpon>DataSet_NhapSanPham.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_NhapSanPham.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_NhapSanPham.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_NhapSanPham.xss">
+      <DependentUpon>DataSet_NhapSanPham.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_XuatSanPham.xsc">
+      <DependentUpon>DataSet_XuatSanPham.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_XuatSanPham.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_XuatSanPham.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_XuatSanPham.xss">
+      <DependentUpon>DataSet_XuatSanPham.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -172,6 +234,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

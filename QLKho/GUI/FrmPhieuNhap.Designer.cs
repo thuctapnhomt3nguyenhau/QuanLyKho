@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPhieuNhap));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnreport = new System.Windows.Forms.Button();
+            this.lblMaPhieu = new System.Windows.Forms.Label();
             this.btnChiTietPhieuNhap = new System.Windows.Forms.Button();
             this.cboMaNhanVien = new System.Windows.Forms.ComboBox();
             this.dtpNgaynhap = new System.Windows.Forms.DateTimePicker();
@@ -52,7 +54,6 @@
             this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblMaPhieu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnreport);
             this.panel1.Controls.Add(this.lblMaPhieu);
             this.panel1.Controls.Add(this.btnChiTietPhieuNhap);
             this.panel1.Controls.Add(this.cboMaNhanVien);
@@ -83,6 +85,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1313, 373);
             this.panel1.TabIndex = 82;
+            // 
+            // btnreport
+            // 
+            this.btnreport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnreport.BackgroundImage")));
+            this.btnreport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnreport.Location = new System.Drawing.Point(783, 267);
+            this.btnreport.Name = "btnreport";
+            this.btnreport.Size = new System.Drawing.Size(90, 90);
+            this.btnreport.TabIndex = 29;
+            this.btnreport.Text = "In hoá đơn";
+            this.btnreport.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnreport.UseVisualStyleBackColor = true;
+            this.btnreport.Click += new System.EventHandler(this.btnreport_Click);
+            // 
+            // lblMaPhieu
+            // 
+            this.lblMaPhieu.AutoSize = true;
+            this.lblMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaPhieu.Location = new System.Drawing.Point(239, 148);
+            this.lblMaPhieu.Name = "lblMaPhieu";
+            this.lblMaPhieu.Size = new System.Drawing.Size(24, 25);
+            this.lblMaPhieu.TabIndex = 28;
+            this.lblMaPhieu.Text = "0";
             // 
             // btnChiTietPhieuNhap
             // 
@@ -304,16 +329,6 @@
             this.NgayNhap.HeaderText = "Ngày nhập";
             this.NgayNhap.Name = "NgayNhap";
             // 
-            // lblMaPhieu
-            // 
-            this.lblMaPhieu.AutoSize = true;
-            this.lblMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaPhieu.Location = new System.Drawing.Point(239, 148);
-            this.lblMaPhieu.Name = "lblMaPhieu";
-            this.lblMaPhieu.Size = new System.Drawing.Size(24, 25);
-            this.lblMaPhieu.TabIndex = 28;
-            this.lblMaPhieu.Text = "0";
-            // 
             // FrmPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,5 +377,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
         private System.Windows.Forms.Label lblMaPhieu;
+        private System.Windows.Forms.Button btnreport;
     }
 }

@@ -45,7 +45,7 @@ namespace QLKho.DAO
 
         public bool DeleteNV(int MANV)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery(" EXEC SP_NHANVIEN_DELETE @MANV ", new object[] { MANV });
+            int result = DataProvider.Instance.ExecuteNonQuery("EXEC SP_NHANVIEN_DELETE @MANV ", new object[] { MANV });
 
             return result > 0;
         }

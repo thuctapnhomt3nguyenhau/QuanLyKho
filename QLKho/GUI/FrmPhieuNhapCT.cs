@@ -27,7 +27,15 @@ namespace QLKho.GUI
             LoadDataGridView();
             LoadCombobox();
             BindingDataToFrom();
+            //LoadIntoComBoBoxTenSP(cboMaSanPhan);
         }
+
+        //void LoadIntoComBoBoxTenSP(ComboBox cb)
+        //{
+        //    cb.DataSource = CTPhieuNhapDAO.Instance.GetListTenSP();
+        //    cb.DisplayMember = "TENSP";
+        //}
+
         private void LoadDataGridView()
         {
             try
@@ -47,11 +55,13 @@ namespace QLKho.GUI
             txtSoLuong.DataBindings.Add(new Binding("Text", dgvChiTietPhieuNhap.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
             txtDonGia.DataBindings.Add(new Binding("Text", dgvChiTietPhieuNhap.DataSource, "DonGia", true, DataSourceUpdateMode.Never));
         }
+
         private void LoadCombobox()
         {
             cboMaSanPhan.DataSource = CTPhieuNhapDAO.Instance.GetMaSanPham();
             cboMaSanPhan.DisplayMember = "MaSanPham";
         }
+
         /// //////////////////////////HANDLE EVENT CLICK /////////////////
         private void btnback_Click(object sender, EventArgs e)
         {

@@ -61,6 +61,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnreport = new System.Windows.Forms.Button();
             this.cboTenSP = new System.Windows.Forms.ComboBox();
             this.lblChiTiet = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -224,9 +225,9 @@
             // 
             this.btnHuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.BackgroundImage")));
             this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHuy.Location = new System.Drawing.Point(1167, 353);
+            this.btnHuy.Location = new System.Drawing.Point(1188, 363);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(121, 101);
+            this.btnHuy.Size = new System.Drawing.Size(100, 91);
             this.btnHuy.TabIndex = 16;
             this.btnHuy.Text = "Tạo phiếu xuất mới";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -237,9 +238,9 @@
             // 
             this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(1013, 353);
+            this.btnXoa.Location = new System.Drawing.Point(1074, 363);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(133, 101);
+            this.btnXoa.Size = new System.Drawing.Size(108, 91);
             this.btnXoa.TabIndex = 15;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -274,9 +275,9 @@
             // 
             this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSua.Location = new System.Drawing.Point(875, 353);
+            this.btnSua.Location = new System.Drawing.Point(962, 363);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(123, 101);
+            this.btnSua.Size = new System.Drawing.Size(106, 91);
             this.btnSua.TabIndex = 14;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -287,9 +288,9 @@
             // 
             this.btnThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThem.BackgroundImage")));
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(736, 353);
+            this.btnThem.Location = new System.Drawing.Point(856, 363);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(114, 101);
+            this.btnThem.Size = new System.Drawing.Size(100, 91);
             this.btnThem.TabIndex = 13;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -300,9 +301,9 @@
             // 
             this.btnRefesh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefesh.BackgroundImage")));
             this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefesh.Location = new System.Drawing.Point(597, 353);
+            this.btnRefesh.Location = new System.Drawing.Point(752, 363);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(121, 101);
+            this.btnRefesh.Size = new System.Drawing.Size(98, 91);
             this.btnRefesh.TabIndex = 8;
             this.btnRefesh.Text = "Refresh";
             this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -313,7 +314,7 @@
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Location = new System.Drawing.Point(375, 406);
+            this.btnSearch.Location = new System.Drawing.Point(330, 406);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(66, 48);
             this.btnSearch.TabIndex = 7;
@@ -322,7 +323,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(47, 406);
+            this.txtSearch.Location = new System.Drawing.Point(13, 406);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(311, 48);
@@ -373,6 +374,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnreport);
             this.panel1.Controls.Add(this.cboTenSP);
             this.panel1.Controls.Add(this.lblChiTiet);
             this.panel1.Controls.Add(this.label10);
@@ -402,6 +404,19 @@
             this.panel1.Size = new System.Drawing.Size(1309, 471);
             this.panel1.TabIndex = 84;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnreport
+            // 
+            this.btnreport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnreport.BackgroundImage")));
+            this.btnreport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnreport.Location = new System.Drawing.Point(648, 363);
+            this.btnreport.Name = "btnreport";
+            this.btnreport.Size = new System.Drawing.Size(98, 91);
+            this.btnreport.TabIndex = 28;
+            this.btnreport.Text = "In hoá đơn";
+            this.btnreport.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnreport.UseVisualStyleBackColor = true;
+            this.btnreport.Click += new System.EventHandler(this.btnreport_Click);
             // 
             // cboTenSP
             // 
@@ -536,5 +551,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MANV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MACT;
         private System.Windows.Forms.ComboBox cboTenSP;
+        private System.Windows.Forms.Button btnreport;
     }
 }

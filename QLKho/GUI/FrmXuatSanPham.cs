@@ -193,5 +193,12 @@ namespace QLKho.GUI
             dgvXuatsanpham.DataSource = XuatKhoList;
             XuatKhoList.DataSource = XuatKhoDAO.Instance.SearchXK(str);
         }
+
+        private void btnreport_Click(object sender, EventArgs e)
+        {
+            FrmXuatReport f = new FrmXuatReport();
+            f.id = Int32.Parse(lblMaPX.Text);
+            f.Show();
+        }
     }
 }

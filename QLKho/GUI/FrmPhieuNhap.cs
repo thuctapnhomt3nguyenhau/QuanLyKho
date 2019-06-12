@@ -165,5 +165,12 @@ namespace QLKho.GUI
         {
             LoadListPhieuNhap();
         }
+
+        private void btnreport_Click(object sender, EventArgs e)
+        {
+            FrmNhapReport f = new FrmNhapReport();
+            f.id = Int32.Parse(lblMaPhieu.Text);
+            f.Show();
+        }
     }
 }
